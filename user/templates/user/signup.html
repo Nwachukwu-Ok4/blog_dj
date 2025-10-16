@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+    <h1>User Signup Page</h1>
+
+    <form action="" class="addblogform" method="post">
+        {% csrf_token %}
+        {{form}}
+     <button> SiGN up</button>
+
+     
+    
+
+    </form>
+
+
+{% endblock main %}

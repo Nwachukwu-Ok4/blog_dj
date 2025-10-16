@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block main %}
+
+    <h1>Add a new blog page</h1>
+
+    <form action=" " method="post" class="addblogform">
+        {% csrf_token %}
+        {{form}}
+        <button>POST</button>
+        </form>
+
+{% endblock main %}

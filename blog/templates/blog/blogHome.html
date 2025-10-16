@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+
+
+{% block main %}
+
+
+    <h1>Welcome to the blog page</h1>
+
+    <section class="myblog">
+        {% for blog in allBlogs%}
+
+            <article class="">
+                <h1>{{blog.title}}</h1>
+                <h1>{{blog.description}}</h1>
+
+                <p>{{blog.author}}</p>
+
+                <a href=" {% url 'blogDetails' pk=blog.pk %}">Read more</a>
+
+            </article>
+        {% endfor %}
+
+    </section>
+{% endblock main %}

@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blueviolet;
+}
+
+header,footer {
+    background-color: aqua;
+    height: 50px;
+    margin: -8px, -7px 0 -7px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    margin-right: 40px;
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.myblog {
+    display: flex;
+    justify-content: space-between;
+    background-color: brown;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    height: 20px;
+    margin: 0;
+}
+
+.addblogform {
+    background-color: brown;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border: 2px double red;
+}
+
+.addblogform > div {
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.addblogform > div > input,
+.addblogform > div > textarea {
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 15px;
+    border: transparent;
+    outline: transparent;
+}
+
+.addblogform > div > label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.addblogform > button {
+    width: 100%;
+    border-radius: 15px;
+    color: black;
+    background-color: blue;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 15px;
+    cursor: crosshair;
+}
+
+#id_username_helptext, #id_password1_helptext, #id_password2_helptext {
+    display: none;
+}

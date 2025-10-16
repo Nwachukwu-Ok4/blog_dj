@@ -1,0 +1,51 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code || Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <Nav>
+            <div>LOGO</div>
+
+            <ul>
+                <li><a href="{% url 'homepage'%}">home</a></li>
+                <li><a href="{% url 'about_me'%}">About</a></li>
+                <li><a href="{% url 'contact'%}">contact</a></li>
+                <li><a href="{% url 'blogHome'%}">blog</a></li>
+
+                {% if user.is_superuser and user.is_authenticated %}
+                    <li><a href="{% url 'addblog'%}"> add blog</a></li>
+                {% endif %}
+
+
+                <!--logout feature-->
+                {% if user.is_authenticated %}
+                    <form action="{% url 'userLogout' %}" method="post">
+                        {% csrf_token %}
+                        <button>Log Out</button>
+                    </form>
+                {% else %}
+                    <li><a href=" {% url 'userLogin' %} ">Login</a></li>
+                {% endif %} 
+            </ul>
+
+        </Nav>
+    </header>
+
+    <main>
+        {% block main  %}
+        {% endblock main  %}
+    </main>
+
+    <footer>
+        <p>ALL RIGHTS RESERVED. &copy; 2025</p>
+    </footer>
+    </body>
+</html>
